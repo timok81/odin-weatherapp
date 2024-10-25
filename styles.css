@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "robotoregular";
+  src: url("fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.5em;
+}
+
+html {
+  font-family: robotoregular, system-ui, sans-serif;
+
+  --menubgcolor: rgb(126, 126, 126);
+  --buttohovercolor: rgb(68, 68, 68);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#searchsubmit {
+  position: absolute;
+  right: 20px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  background-image: url("images/magnify.svg");
+  background-size: cover;
+  background-position: center;
+  height: 30px;
+  width: 35px;
+  filter: invert(30%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(100%)
+  contrast(104%);
+}
+
+#searchsubmit:hover {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(100%)
+    contrast(104%);
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  color: rgb(0, 91, 175);
+}
+
+.form-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 16px 0px 16px 0px;
+}
+
+input {
+  flex: 1 0 auto;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgb(240, 240, 240);
+  width: 300px;
+  height: 40px;
+  margin: 0px 16px 0px 16px;
+  padding: 8px;
+  font-size: 1.1em;
+}
+
+input:focus {
+  outline: 1px solid gray;
+}
+
+#content {
+  display: none;
+}
+
+#contentvisible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  min-height: 800px;
+}
+
+#loadingscreen {
+  display: inline;
+  position: absolute;
+  top: 200px;
+}
+
+#loadingscreenhidden{
+  display: none;
+}
+
+#weathertoday {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+  width: 100%;
+  height: 250px;
+}
+
+#weathertodayheader {
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#weathertodaylocation {
+  display: flex;
+  flex-direction: column;
+  color: rgb(73, 73, 73);
+  width: 100%;
+}
+
+#weathertodayreport {
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#weathertodaydegrees {
+  display: flex;
+}
+
+#weathertodaydegrees h3 {
+  font-size: 3em;
+}
+
+#weatherextrainfo {
+  text-align: right;
+}
+
+#weathertodayforecast {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid gray;
+}
+
+.forecastday {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecastday h4 {
+  font-size: 1em;
+  color: rgb(97, 169, 236);
+}
+
+.forecastday div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+.forecastday div img {
+  margin-left: 4px;
+}
+
+.iconsunny {
+  filter: invert(71%) sepia(68%) saturate(831%) hue-rotate(359deg)
+    brightness(102%) contrast(103%);
+}
+
+.iconcloudy {
+  filter: invert(49%) sepia(37%) saturate(371%) hue-rotate(163deg)
+    brightness(93%) contrast(85%);
+}
+
+#unitsbutton {
+  grid-row: 1/2;
+  border: 0;
+  border-radius: 10px;
+  width: 50px;
+  height: 30px;
+  background-color: orange;
+  color: white;
+  align-self: flex-end;
+}
+
+#unitsbutton:hover {
+  background-color: rgb(247, 148, 0);
+}

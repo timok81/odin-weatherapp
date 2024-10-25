@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Odin Weatherapp</title>
+  </head>
+
+  <body>
+    <h1>Weather</h1>
+    <form>
+      <div class="form-row">
+        <input
+          type="text"
+          id="location"
+          placeholder="Search for location, e.g. Berlin"
+          required
+        />
+        <button type="submit" id="searchsubmit"></button>
+      </div>
+    </form>
+
+    <div id="loadingscreenhidden">
+      <p>Fetching weather data...</p>
+    </div>
+
+    <div id="content">
+      <div id="weathertoday">
+        <div id="weathertodayheader">
+          <div id="weathertodaylocation">
+            <h2 id="wlocation">Hamburg</h2>
+            <p id="wdate">Sun - 10/24/2024</p>
+          </div>
+          <div>
+            <button
+              type="button"
+              id="unitsbutton"
+              data-unit="celsius"
+              title="Toggle between Celsius and Fahrenheit"
+            >
+              &#176;C / &#176;F
+            </button>
+          </div>
+        </div>
+        <div id="weathertodayreport">
+          <div id="weathertodaydegrees">
+            <img
+              src="images/sun-svgrepo-com.svg"
+              alt="weather icon"
+              width="40px"
+              id="wicon"
+            />
+            <h3 id="wdegrees">20</h3>
+          </div>
+          <div id="weatherextrainfo">
+            <p id="wcond">Partly cloudy</p>
+            <p id="wfeelslike">Feels like 20</p>
+          </div>
+        </div>
+
+        <div id="weathertodayforecast">
+          <div class="forecastday">
+            <h4 class="fcday">Mon</h4>
+            <div>
+              <p class="fcdegrees">20</p>
+              <img
+                src="images/sun-svgrepo-com.svg"
+                alt="weather icon"
+                width="25px"
+                class="fcicon"
+              />
+            </div>
+          </div>
+          <div class="forecastday">
+            <h4 class="fcday">Tue</h4>
+            <div>
+              <p class="fcdegrees">20</p>
+              <img
+                src="images/sun-svgrepo-com.svg"
+                alt="weather icon"
+                width="25px"
+                class="fcicon"
+              />
+            </div>
+          </div>
+          <div class="forecastday">
+            <h4 class="fcday">Wed</h4>
+            <div>
+              <p class="fcdegrees">20</p>
+              <img
+                src="images/sun-svgrepo-com.svg"
+                alt="weather icon"
+                width="25px"
+                class="fcicon"
+              />
+            </div>
+          </div>
+          <div class="forecastday">
+            <h4 class="fcday">Thu</h4>
+            <div>
+              <p class="fcdegrees">20</p>
+              <img
+                src="images/sun-svgrepo-com.svg"
+                alt="weather icon"
+                width="25px"
+                class="fcicon"
+              />
+            </div>
+          </div>
+          <div class="forecastday">
+            <h4 class="fcday">Fri</h4>
+            <div>
+              <p class="fcdegrees">20</p>
+              <img
+                src="images/sun-svgrepo-com.svg"
+                alt="weather icon"
+                width="25px"
+                class="fcicon"
+              />
+            </div>
+          </div>
+          <div class="forecastday">
+            <h4 class="fcday">Sat</h4>
+            <div>
+              <p class="fcdegrees">20</p>
+              <img
+                src="images/sun-svgrepo-com.svg"
+                alt="weather icon"
+                width="25px"
+                class="fcicon"
+              />
+            </div>
+          </div>
+          <div class="forecastday">
+            <h4 class="fcday">Sun</h4>
+            <div>
+              <p class="fcdegrees">20</p>
+              <img
+                src="images/sun-svgrepo-com.svg"
+                alt="weather icon"
+                width="25px"
+                class="fcicon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
